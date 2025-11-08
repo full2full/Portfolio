@@ -1,0 +1,172 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}contact{% endblock %}
+
+{% block content %}
+
+
+   
+    <style>
+        .main-content {
+    padding-top: 80px;
+}
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0px auto;
+            
+        }
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            font-weight: normal;
+        }
+        .info-row {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin: 40px 0;
+        }
+        .info-item {
+            text-align: center;
+        }
+        .info-item i {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            background: #74b9c7;
+            border-radius: 50%;
+            line-height: 48px;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 7px 40px rgba(40,40,40,0.07);
+            padding: 30px 40px;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .form-block {
+            flex: 1 1 320px;
+            min-width: 260px;
+        }
+        .form-block h3 {
+            margin-bottom: 20px;
+        }
+        .form-block form label {
+            font-size: 12px;
+            color: #222;
+            font-weight: bold;
+            margin-bottom: 3px;
+            margin-top: 17px;
+            display: block;
+        }
+        .form-block form input,
+        .form-block form textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        .form-block form textarea {
+            min-height: 65px;
+            resize: vertical;
+        }
+        .form-block form button {
+            background: #74b9c7;
+            padding: 10px 18px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            margin-top: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 4px 12px rgba(19, 133, 183, 0.07);
+        }
+        .form-block form button:hover {
+            background: #5aa6b3;
+        }
+        .img-block {
+            flex: 1 1 340px;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .img-block img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 100px;
+            box-shadow: 0 9px 30px rgba(40,40,40,0.12);
+        }
+        @media (max-width: 880px) {
+            .form-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 28px;
+                padding: 25px 10px;
+            }
+            .img-block {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+    <!-- Use icon library if you'd like (e.g. FontAwesome or Ionic), here icons are represented as text -->
+
+<div class="main-content">
+<div class="container">
+    <h2>Contact Form </h2>
+    <div class="info-row">
+        <div class="info-item">
+            <i>&#128205;</i><br>
+            Address: Bbatapur Varanasi UP India
+        </div>
+        <div class="info-item">
+            <i>&#128222;</i><br>
+            Phone: <a href="#" style="color:#5aa6b3;text-decoration:none;">+91 8418951430</a>
+        </div>
+        <div class="info-item">
+            <i>&#9993;</i><br>
+            Email: <a href="" style="color:#5aa6b3;text-decoration:none;">subhamkpatel2002@gmail.com</a>
+        </div>
+        <div class="info-item">
+            <i>&#127760;</i><br>
+            Website: <a href="#" style="color:#5aa6b3;text-decoration:none;">yoursite.com</a>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-block">
+            <h3>Contact Us</h3>
+            <form>
+                <label for="name">FULL NAME</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <label for="email">EMAIL ADDRESS</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="subject">SUBJECT</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="img-block">
+            <img src="/static/myapp/image/pic.jpg" alt="Contact Illustration">
+
+            <!-- Replace src with your lion image file if hosting locally -->
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+{%endblock%}
