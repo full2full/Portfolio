@@ -6,4 +6,5 @@ urlpatterns = [
    
     path('project/', views.project, name='project'),
     path('contact/', views.contact, name='contact'),
+    path('about/', views.about, name='about'),
 ]

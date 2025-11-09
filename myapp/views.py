@@ -10,5 +10,7 @@ def project(request):
     return render(request, 'myapp/project.html')
 def contact(request):
     return render(request, 'myapp/contact.html')
+def about(request):
+    return render(request, 'myapp/about.html')
 
 
