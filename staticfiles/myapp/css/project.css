@@ -1,0 +1,27 @@
+.info-box {
+  position: relative;
+  background-color: #00b894; /* Box color */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  height: 100%;
+  overflow: hidden;
+
+  /* Cut top-right corner */
+  clip-path: polygon(
+    0 0,        /* top-left */
+    calc(100% - 50px) 0,  /* top-right before cut */
+    100% 50px,  /* corner cut */
+    100% 100%,  /* bottom-right */
+    0 100%      /* bottom-left */
+  );
+}
+
+.info-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+.why-choose {
+    margin-top: 80px; /* ensures it doesn’t go under navbar */
+}

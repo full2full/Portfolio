@@ -1,0 +1,174 @@
+/* Hero Section Styling */
+.hero {
+    background: linear-gradient(to right, #000000d0 40%, #0d6efd10);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+}
+
+
+.navbar .nav-link {
+    font-weight: 500;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #0d6efd;
+}
+/* ================= Hero Section ================= */
+.hero {
+  position: relative;
+  min-height: 450px;
+}
+
+.hero-section {
+    background: #000;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 80px; 
+    position: relative; /* ✅ for absolute child */
+}
+
+/* Left side text */
+.hero-text {
+    max-width: 600px; 
+    z-index: 1; /* ensure text is above background */
+}
+
+/* Right side image - always on right */
+.hero-image {
+    width: 330px;
+    height: 480px;
+
+    background-image: url('/static/myapp/image/s.png');
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 200px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
+    position: absolute; 
+    right: 40px;       /* distance from right edge */
+    top: 50%;          
+    transform: translateY(-50%);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-image {
+        width: 200px;      /* smaller image */
+        height: 300px;     /* smaller image */
+        right: 20px;       /* closer to right */
+        top: 20px;         /* align top instead of center */
+        transform: none;   /* remove translateY */
+    }
+
+    .hero-text {
+        text-align: left;  /* optional */
+        max-width: 100%;   /* full width on small screen */
+    }
+}
+
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+}
+
+
+
+/* ================= Navbar ================= */
+.navbar .nav-link {
+    font-weight: 500;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #0d6efd;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 991px) {
+    .hero-circle {
+        width: 100px;
+        height: 100px;
+    }
+    .circle-1 {
+        top: 30px;
+        right: 30px;
+    }
+    .circle-2 {
+        top: 150px;
+        right: 30px;
+    }
+}
+
+/* Why Choose Us Section */
+.why-choose {
+  background-color: #f9f9f9;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* spacing between boxes */
+}
+
+
+
+.info-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.info-box .icon i {
+  color: white;
+}
+
+.info-box h5 {
+  margin-top: 10px;
+}
+
+.info-box p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+  .info-row {
+    flex-wrap: nowrap; /* keep all boxes in one row on large screens */
+  }
+
+  .info-box {
+    flex: 1; /* equal width */
+  }
+}
+/* Folded corner effect */
+
+.info-box {
+  position: relative;
+  background-color: #00b894; /* Box color */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  height: 100%;
+  overflow: hidden;
+
+  /* Cut top-right corner */
+  clip-path: polygon(
+    0 0,        /* top-left */
+    calc(100% - 50px) 0,  /* top-right before cut */
+    100% 50px,  /* corner cut */
+    100% 100%,  /* bottom-right */
+    0 100%      /* bottom-left */
+  );
+}
