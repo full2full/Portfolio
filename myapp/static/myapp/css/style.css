@@ -43,7 +43,7 @@
     width: 330px;
     height: 480px;
 
-    background-image: url('/static/myapp/image/s.png');
+    background-image: url('/static/myapp/image/sp.jpg');
     background-size: cover;
     background-position: center;
 
@@ -66,7 +66,7 @@
         top: 20px;         /* align top instead of center */
         transform: none;   /* remove translateY */
     }
-
+    
     .hero-text {
         text-align: left;  /* optional */
         max-width: 100%;   /* full width on small screen */
